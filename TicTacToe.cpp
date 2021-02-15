@@ -1,5 +1,3 @@
-#include <iostream>
-#include <vector>
 
 std::vector<char> createBoard(){
     std::vector<char> board;
