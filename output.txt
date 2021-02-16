@@ -1,0 +1,96 @@
+*|*|*|
+------ 
+*|*|*|
+------ 
+*|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 1
+Choose a column: 1
+*|*|*|
+------ 
+*|x|*|
+------ 
+*|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 1
+Choose a column: 0
+*|*|*|
+------ 
+o|x|*|
+------ 
+*|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 2
+Choose a column: 0
+*|*|*|
+------ 
+o|x|*|
+------ 
+x|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 0
+Choose a column: 0
+o|*|*|
+------ 
+o|x|*|
+------ 
+x|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 1 
+Choose a column: 0
+o|*|*|
+------ 
+x|x|*|
+------ 
+x|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 0
+Choose a column: 1
+o|o|*|
+------ 
+x|x|*|
+------ 
+x|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 0
+Choose a column: 2
+o|o|x|
+------ 
+x|x|*|
+------ 
+x|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 1
+Choose a column: 2
+o|o|x|
+------ 
+x|x|o|
+------ 
+x|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 1
+Choose a column: 2
+o|o|x|
+------ 
+x|x|x|
+------ 
+x|*|*|
+------ 
+|NOTE: valid row and column indexes are 0-2
+Choose a row: 2
+Choose a column: 1
+o|o|x|
+------ 
+x|x|x|
+------ 
+x|o|*|
+------
