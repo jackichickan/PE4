@@ -11,17 +11,21 @@ std::vector<char> createBoard(){
     return board;
 }
 
-void DisplayBoard(std::vector<char> myBoard){
-    int counter = 0;
+
+void DisplayBoard(std::vector<char> board){
     for(int i = 0; i <= 9; i++){
-        std::cout << myBoard[i];
-        counter++;
-        if(counter == 3){
-            counter = 0;
+        std::cout << board[i] << "|";
+        if((i+1) % 3 == 0){
             std::cout << '\n';
+            std::cout << "------ \n";
+            
         }
     }
 }
+
+// 0 1 2 
+// 3 4 5
+// 6 7 8
 
 int GetPlayerChoice(){
     std::string rowInput;
@@ -40,10 +44,34 @@ int GetPlayerChoice(){
     return result;
 }
 
+//if player is true, then it is player 1's turn
+std::vector<char> PlaceMarker(std::vector<char> board, int position, bool player){
+    if(player){
+        board[position] = 'x';
+    }
+    else {
+        board[position] = 'o';
+    }
+    return board;
+}
+
 int main(){
 
     std::vector<char> myBoard = createBoard();
-    DisplayBoard(myBoard);
-    std::cout << GetPlayerChoice() << std::endl;
 
-}
+    //DisplayBoard(myBoard);
+
+    GetPlayerChoice();
+
+    myBoard = PlaceMarker(myBoard, 3, true);
+
+    DisplayBoard(myBoard);
+    // for(int i = 0; i <= 9; i++){
+    //     std::cout << myBoard[i];
+    //     if((i+1) % 3 == 0){
+    //         std::cout << '\n';
+    //     }
+    // }
+}  
+
+
