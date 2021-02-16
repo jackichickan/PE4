@@ -36,6 +36,7 @@ int GetPlayerChoice(){
     result = ((stoi(rowInput)+1) * (stoi(colInput)+1))-1;
     }
     while(result < 0 || result > 8);
+    int result = ((stoi(rowInput)+1) * (stoi(colInput)+1))-1;
     return result;
 }
 
