@@ -26,11 +26,16 @@ void DisplayBoard(std::vector<char> myBoard){
 int GetPlayerChoice(){
     std::string rowInput;
     std::string colInput;
+    int result;
+    do{
     std::cout << "NOTE: valid row and column indexes are 0-2" << std::endl;
     std::cout << "Choose a row: ";
     std::cin >> rowInput;
     std::cout << "Choose a column: ";
     std::cin >> colInput;
+    result = ((stoi(rowInput)+1) * (stoi(colInput)+1))-1;
+    }
+    while(result < 0 || result > 8);
     int result = ((stoi(rowInput)+1) * (stoi(colInput)+1))-1;
     return result;
 }
