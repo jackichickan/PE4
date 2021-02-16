@@ -37,10 +37,9 @@ int GetPlayerChoice(){
     std::cin >> rowInput;
     std::cout << "Choose a column: ";
     std::cin >> colInput;
-    result = ((stoi(rowInput)+1) * (stoi(colInput)+1))-1;
+    result = (3 * stoi(rowInput)) + stoi(colInput);
     }
     while(result < 0 || result > 8);
-    int result = ((stoi(rowInput)+1) * (stoi(colInput)+1))-1;
     return result;
 }
 
@@ -59,19 +58,24 @@ int main(){
 
     std::vector<char> myBoard = createBoard();
 
-    //DisplayBoard(myBoard);
-
-    GetPlayerChoice();
-
-    myBoard = PlaceMarker(myBoard, 3, true);
-
     DisplayBoard(myBoard);
-    // for(int i = 0; i <= 9; i++){
-    //     std::cout << myBoard[i];
-    //     if((i+1) % 3 == 0){
-    //         std::cout << '\n';
-    //     }
-    // }
+    int turn = 0;
+    bool playerTurn = true;
+    while(turn < 10){
+        int choice;
+
+        choice = GetPlayerChoice();
+
+        myBoard = PlaceMarker(myBoard, choice, playerTurn);
+
+        DisplayBoard(myBoard);
+
+        turn +=1;
+
+        playerTurn = !playerTurn;
+    }
+        
+
 }  
 
 
