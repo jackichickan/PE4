@@ -6,10 +6,11 @@ std::vector<char> createBoard(){
 
 
     for(int i = 0; i < 9; i++){
-        board.push_back('0');
+        board.push_back('*');
     }
     return board;
 }
+
 
 void DisplayBoard(std::vector<char> board){
     for(int i = 0; i <= 9; i++){
@@ -25,14 +26,22 @@ void DisplayBoard(std::vector<char> board){
 // 0 1 2 
 // 3 4 5
 // 6 7 8
-int GetPlayerChoice(){
-    int selection;
-    do {
-        std::cout<<"Choose a square"<<"\n";
-        std::cin>>selection;
 
-    } while((selection < 0) || (selection > 10));
-    return selection;
+int GetPlayerChoice(){
+    std::string rowInput;
+    std::string colInput;
+    int result;
+    do{
+    std::cout << "NOTE: valid row and column indexes are 0-2" << std::endl;
+    std::cout << "Choose a row: ";
+    std::cin >> rowInput;
+    std::cout << "Choose a column: ";
+    std::cin >> colInput;
+    result = ((stoi(rowInput)+1) * (stoi(colInput)+1))-1;
+    }
+    while(result < 0 || result > 8);
+    int result = ((stoi(rowInput)+1) * (stoi(colInput)+1))-1;
+    return result;
 }
 
 //if player is true, then it is player 1's turn
@@ -63,5 +72,6 @@ int main(){
     //         std::cout << '\n';
     //     }
     // }
+}  
 
-}
+
